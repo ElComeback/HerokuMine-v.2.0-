@@ -9,12 +9,16 @@ BP_DIR="$(cd "$(dirname "$0")" && pwd)"
 BUILD_DIR=$1
 CACHE_DIR=$2
 
+echo -n "Iniciando Sistema de Despliegue del Builtpack"
+
 echo -n "-----> Instalando Ngrok... "
 curl --silent -o ngrok.zip -L "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip" | indent
 unzip ngrok.zip -d $BUILD_DIR/bin > /dev/null 2>&1
 echo "Listo"
 
 MC_VERSION="${MC_VERSION:-1.15.2}"
-echo -n "-----> Installing server version:${MC_VERSION}... "
+echo -n "-----> Instalando Servidor, Version:${MC_VERSION}... "
 curl --silent -o $BUILD_DIR/server.jar "https://cdn.getbukkit.org/spigot/spigot${MC_VERSION}.jar" | indent
 echo "Listo"
+
+echo -n "Cerrando Sistema... Siguiente"
