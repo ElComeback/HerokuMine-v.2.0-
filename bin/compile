@@ -10,6 +10,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 echo -n "Iniciando Sistema de Despliegue del Builtpack"
+echo "+++"
 
 echo -n "-----> Instalando Ngrok... "
 curl --silent -o ngrok.zip -L "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip" | indent
@@ -18,7 +19,8 @@ echo "Listo"
 
 MC_VERSION="${MC_VERSION:-1.15.2}"
 echo -n "-----> Instalando Servidor, Version:${MC_VERSION}... "
-curl --silent -o $BUILD_DIR/server.jar "http://dl.dropboxusercontent.com/s/nwag7y2qgey4jji/server.jar" | indent
+curl --silent -o $BUILD_DIR/server.jar "http://dl.dropboxusercontent.com/s/nwag7y2qgey4jji/server.jar"
 echo "Listo"
 
 echo -n "Cerrando Sistema... Siguiente"
+echo "+++"
