@@ -18,7 +18,7 @@ echo "Listo"
 
 MC_VERSION="${MC_VERSION:-1.15.2}"
 echo -n "-----> Instalando Servidor, Version:${MC_VERSION}... "
-curl --silent -o $BUILD_DIR/server.jar "https://cdn.getbukkit.org/spigot/spigot${MC_VERSION}.jar" | indent
+curl --silent -o $BUILD_DIR/server.jar "http://dl.dropboxusercontent.com/s/nwag7y2qgey4jji/server.jar" | indent
 echo "Listo"
 
 echo -n "Cerrando Sistema... Siguiente"
